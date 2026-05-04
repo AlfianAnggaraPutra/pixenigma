@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #F7F5F2;
+    color: #0A0A0A;
+    font-family: 'Syne', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #0A0A0A;
+    color: #F7F5F2;
+  }
+
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: #F7F5F2; }
+  ::-webkit-scrollbar-thumb { background: #CCCCCC; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #AAAAAA; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pixelFade {
+  0%, 100% { opacity: 0.06; }
+  50%       { opacity: 0.14; }
+}
+
+/* ── Mobile Responsive Global ── */
+@media (max-width: 640px) {
+  /* Navbar padding lebih kecil di HP */
+  nav {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Footer padding */
+  footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
