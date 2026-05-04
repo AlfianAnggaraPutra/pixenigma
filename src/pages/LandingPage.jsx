@@ -141,7 +141,7 @@ export default function LandingPage() {
         {/* Title */}
         <h1 style={{
           fontFamily:"'Syne', sans-serif",
-          fontSize:'clamp(42px,7.5vw,88px)',
+          fontSize:'clamp(28px,7.5vw,72px)',
           fontWeight:800, letterSpacing:'0.07em',
           color:'#0A0A0A', lineHeight:1,
           marginBottom:'14px', textAlign:'center',
