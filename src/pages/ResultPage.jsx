@@ -194,7 +194,7 @@ export default function ResultPage() {
             </h2>
             <p style={{ fontFamily:'Space Mono, monospace', fontSize:'12px', letterSpacing:'0.13em', color:'#333333', marginBottom:'28px', textAlign:'center', fontWeight:700 }}>
               {true
-                ?'Simpan file PNG hasil enkripsi beserta konfigurasi kunci untuk dekripsi'
+                ?'Simpan file PNG hasil enkripsi atau dekripsi beserta konfigurasi kunci'
                 :'' }
             </p>
 
