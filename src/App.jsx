@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AppProvider } from './context/AppContext'
 import SplashScreen  from './components/SplashScreen'
 import LoadingScreen from './components/LoadingScreen'
 import LandingPage   from './pages/LandingPage'
@@ -35,8 +36,11 @@ function AppScreens() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <AppScreens />
-    </BrowserRouter>
+    // AppProvider membungkus seluruh app agar semua page bisa akses context
+    <AppProvider>
+      <BrowserRouter>
+        <AppScreens />
+      </BrowserRouter>
+    </AppProvider>
   )
 }
