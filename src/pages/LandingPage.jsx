@@ -32,7 +32,7 @@ export default function LandingPage() {
         </svg>
       ),
       title: 'Pixel-Level',
-      desc:  'Setiap piksel gambar dienkripsi secara individual menggunakan algoritma Enigma',
+      desc:  'Setiap piksel gambar diproses secara individual menggunakan algoritma Enigma',
     },
     {
       icon: (isHov) => (
@@ -49,7 +49,7 @@ export default function LandingPage() {
           })}
         </svg>
       ),
-      title: '5 Rotor',
+      title: '5 Pilihan Rotor',
       desc:  'Pilih 3 dari 5 rotor dengan affine cipher unik untuk kombinasi enkripsi yang kuat',
     },
     {
@@ -75,8 +75,8 @@ export default function LandingPage() {
           </svg>
         )
       },
-      title: '72 Pasangan',
-      desc:  'Plugboard mendukung hingga 72 pasangan substitusi angka untuk keamanan tambahan',
+      title: '120 Pasangan Plugboard',
+      desc:  'Plugboard mendukung hingga 120 pasangan substitusi angka untuk keamanan tambahan',
     },
     {
       // Ikon enkripsi/dekripsi: gambar dengan ikon kunci di atasnya

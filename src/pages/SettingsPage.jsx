@@ -74,7 +74,7 @@ export default function SettingsPage() {
     setPairErrors(errors)
   }
 
-  const addPair=()=>{if(pairs.length>=72)return;setPairs([...pairs,['','']]);setPairErrors([...pairErrors,''])}
+  const addPair=()=>{if(pairs.length>=120)return;setPairs([...pairs,['','']]);setPairErrors([...pairErrors,''])}
   const removePair=(i)=>{
     if(pairs.length<=1){setPairs([['','']]);setPairErrors(['']);return}
     setPairs(pairs.filter((_,idx)=>idx!==i))
@@ -173,7 +173,7 @@ export default function SettingsPage() {
         </div>
 
         {/* Section 3: Plugboard */}
-        <SectionHeader badge="03" label="Plugboard" sub={`Maks. 72 Pasangan Plugboard · Pasangan Aktif: ${pairs.filter(p=>p[0]!==''&&p[1]!=='').length} pasangan`}/>
+        <SectionHeader badge="03" label="Plugboard" sub={`Maks. 120 Pasangan Plugboard · Pasangan Aktif: ${pairs.filter(p=>p[0]!==''&&p[1]!=='').length} pasangan`}/>
         <div style={{ width:'100%', background:'rgba(255,255,255,0.85)', border:'1.5px solid rgba(0,0,0,0.08)', borderRadius:'14px', padding:'20px', marginBottom:'14px', backdropFilter:'blur(6px)' }}>
           <div style={{ display:'flex', flexDirection:'column', gap:'8px', maxHeight:'220px', overflowY:'auto', paddingRight:'4px' }}>
             {pairs.map((pair,i)=>(
@@ -188,7 +188,7 @@ export default function SettingsPage() {
               </div>
             ))}
           </div>
-          {pairs.length<72&&(
+          {pairs.length<120&&(
             <button onClick={addPair} style={{ marginTop:'12px', padding:'10px', background:'transparent', border:'1.5px dashed rgba(0,0,0,0.15)', borderRadius:'8px', fontFamily:F_BODY, fontSize:'12px', color:'#555555', fontWeight:500, cursor:'pointer', width:'100%', transition:'all 0.2s ease' }}>
               + Tambah Pasangan
             </button>
