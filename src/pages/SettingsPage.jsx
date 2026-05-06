@@ -151,13 +151,13 @@ export default function SettingsPage() {
         </div>
 
         {/* Section 2: Posisi */}
-        <SectionHeader badge="02" label="Posisi Awal Rotor" sub="Nilai awal 0–255 untuk rotor Kanan (i), Tengah (j), dan Kiri (k)"/>
+        <SectionHeader badge="02" label="Posisi Awal Rotor" sub="Posisi awal dengan nilai 0–255 untuk rotor Kanan, Tengah, dan Kiri"/>
         <div style={{ width:'100%', display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'12px', marginBottom:'14px' }}>
           {[{label:'Rotor Kanan',key:'i'},{label:'Rotor Tengah',key:'j'},{label:'Rotor Kiri',key:'k'}].map(({label,key},idx)=>(
             <div key={idx} style={{ background:'rgba(255,255,255,0.85)', border:'1.5px solid rgba(0,0,0,0.08)', borderRadius:'14px', padding:'16px 12px', backdropFilter:'blur(6px)', display:'flex', flexDirection:'column', alignItems:'center', minWidth:0, overflow:'hidden', gap:'10px' }}>
               <div style={{ textAlign:'center' }}>
                 <div style={{ fontFamily:F_BODY, fontSize:'12px', fontWeight:700, color:'#0A0A0A', letterSpacing:'0.02em', lineHeight:1 }}>{label}</div>
-                <div style={{ fontFamily:F_MONO, fontSize:'9px', color:'#333333', marginTop:'4px', lineHeight:1, fontWeight:700 }}>posisi {key}</div>
+                <div style={{ fontFamily:F_MONO, fontSize:'9px', color:'#333333', marginTop:'4px', lineHeight:1, fontWeight:700 }}>Posisi Awal</div>
               </div>
               <div style={{ fontFamily:F_BODY, fontSize:'clamp(24px,4vw,36px)', fontWeight:800, color:'#0A0A0A', lineHeight:1, letterSpacing:'-0.02em' }}>{posInputs[idx]}</div>
               <div style={{ display:'flex', alignItems:'center', gap:'6px', width:'100%' }}>
@@ -173,7 +173,7 @@ export default function SettingsPage() {
         </div>
 
         {/* Section 3: Plugboard */}
-        <SectionHeader badge="03" label="Plugboard" sub={`Maks. 72 pasangan substitusi · Aktif: ${pairs.filter(p=>p[0]!==''&&p[1]!=='').length} pasangan`}/>
+        <SectionHeader badge="03" label="Plugboard" sub={`Maks. 72 Pasangan Plugboard · Pasangan Aktif: ${pairs.filter(p=>p[0]!==''&&p[1]!=='').length} pasangan`}/>
         <div style={{ width:'100%', background:'rgba(255,255,255,0.85)', border:'1.5px solid rgba(0,0,0,0.08)', borderRadius:'14px', padding:'20px', marginBottom:'14px', backdropFilter:'blur(6px)' }}>
           <div style={{ display:'flex', flexDirection:'column', gap:'8px', maxHeight:'220px', overflowY:'auto', paddingRight:'4px' }}>
             {pairs.map((pair,i)=>(
