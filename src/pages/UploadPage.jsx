@@ -41,7 +41,7 @@ export default function UploadPage() {
     if (fileMB > MAX_FILE_MB) {
       setError(
         `Ukuran file terlalu besar (${fileMB.toFixed(1)} MB). ` +
-        `Maksimal ${MAX_FILE_MB} MB. Silakan kompres gambar terlebih dahulu di squoosh.app`
+        `Maksimal ${MAX_FILE_MB} MB. Silakan kompres gambar terlebih dahulu`
       )
       return
     }
@@ -58,8 +58,8 @@ export default function UploadPage() {
       if (totalPixels > MAX_PIXELS) {
         setError(
           `Resolusi gambar terlalu besar (${img.width.toLocaleString()} × ${img.height.toLocaleString()} piksel). ` +
-          `Maksimal sekitar 8000 × 8000 piksel. ` +
-          `Silakan kecilkan ukuran gambar di iloveimg.com atau Paint sebelum upload.`
+          `Melebihi batas maksimal 8000 × 8000 piksel. ` +
+          `Silakan kecilkan resolusi/dimensi gambar (resize) sebelum upload.`
         )
         setPreview(null)
         app.reset()
