@@ -5,7 +5,7 @@ import AnimatedGridBg from '../components/AnimatedGridBg'
 import { useApp } from '../context/AppContext'
 
 const MAX_FILE_MB  = 50
-const MAX_PIXELS   = 64_000_000  // 64 juta piksel ≈ 8000×8000
+const MAX_PIXELS   = 64_000_000  // 64 juta piksel
 
 export default function UploadPage() {
   const navigate  = useNavigate()
@@ -58,7 +58,7 @@ export default function UploadPage() {
       if (totalPixels > MAX_PIXELS) {
         setError(
           `Resolusi gambar terlalu besar (${img.width.toLocaleString()} × ${img.height.toLocaleString()} piksel). ` +
-          `Melebihi batas maksimal 8000 × 8000 piksel. ` +
+          `Melebihi batas maksimal 64 juta piksel. ` +
           `Silakan kecilkan resolusi/dimensi gambar (resize) sebelum upload.`
         )
         setPreview(null)
@@ -106,7 +106,7 @@ export default function UploadPage() {
 
       <div style={{ flex:1, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:'32px 24px', position:'relative', zIndex:10 }}>
         <h2 style={pageTitle()}>UPLOAD GAMBAR</h2>
-        <p style={pageSubtitle()}>Format yang diterima: hanya PNG · Maksimal ukuran 50mb dan dimensi 8000 × 8000 piksel</p>
+        <p style={pageSubtitle()}>Format yang diterima: hanya PNG · Maksimal ukuran 50mb dan jumlah 64 juta piksel</p>
 
         {/* Drop zone */}
         <div
